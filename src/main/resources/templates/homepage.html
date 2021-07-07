@@ -9,7 +9,11 @@
 </head>
 <body>
 <div>
-    <div sec:authorize="isAuthenticated()"><a class="nav-link" href="/logout">Logout</a></div>
+    <div sec:authorize="isAuthenticated()">
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Logout" />
+        </form>
+    </div>
 
 </div>
 <form name="f" th:action="@{/post/add}" method="post" th:object="${post}">
