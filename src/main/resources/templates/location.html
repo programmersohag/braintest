@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+<form name="f" th:action="@{/location/add}" method="post" th:object="${location}">
+    <fieldset>
+        <legend>Register</legend>
+        <label for="locationName">Location name</label>
+        <input id="locationName" name="name" th:value="${name}" type="text"/>
+        <div class="form-actions">
+            <button type="submit" class="btn">Add</button>
+        </div>
+    </fieldset>
+</form>
+</body>
+</html>
